@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">ForGit</string>
     <string name="action_settings">Settings</string>
-    <string name="generate">Generate</string>
+    <string name="generate">Show another fun fact</string>
     <string name="DYK">Did you know?</string>
+    <string name="fact">TEMP</string>
 </resources>

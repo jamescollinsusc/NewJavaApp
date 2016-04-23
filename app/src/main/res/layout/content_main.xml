@@ -16,14 +16,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/DYK"
-        android:id="@+id/textView" />
+        android:id="@+id/knowQuestionText"
+        android:textSize="24sp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/generate"
         android:id="@+id/generateButton"
+        android:layout_marginBottom="61dp"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fact"
+        android:id="@+id/factDisplayText"
+        android:layout_below="@+id/knowQuestionText"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="102dp" />
+        android:layout_marginTop="166dp"
+        android:textSize="24sp"
+        android:textColor="#FF0000" />
+
 </RelativeLayout>
