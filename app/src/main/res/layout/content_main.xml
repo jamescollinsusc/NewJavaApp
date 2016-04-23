@@ -10,33 +10,43 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.origin.forgit.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_main"
+    android:background="#51b46d">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/DYK"
         android:id="@+id/knowQuestionText"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textColor="#91ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/generate"
         android:id="@+id/generateButton"
-        android:layout_marginBottom="61dp"
+        android:background="#ffffff"
+        android:textColor="#51b46d"
+        android:paddingLeft="5sp"
+        android:paddingRight="5sp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignLeft="@+id/factDisplayText"
+        android:layout_alignStart="@+id/factDisplayText" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/fact"
         android:id="@+id/factDisplayText"
-        android:layout_below="@+id/knowQuestionText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="166dp"
         android:textSize="24sp"
-        android:textColor="#FF0000" />
+        android:textColor="#ffffff"
+        android:layout_below="@+id/knowQuestionText"
+        android:layout_alignLeft="@+id/knowQuestionText"
+        android:layout_alignStart="@+id/knowQuestionText"
+        android:layout_marginTop="153dp" />
 
 </RelativeLayout>
