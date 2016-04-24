@@ -23,8 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mFactDisplayText;
     private Button mGenereateButton;
     private FactBook mFactBook = new FactBook();
-    private ColorBook mColorBook = new ColorBook();
-    private View mLayout;
+    private RelativeLayout mLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,15 +32,16 @@ public class MainActivity extends AppCompatActivity {
         // Assign views from layout to fields
         mGenereateButton = (Button) findViewById(R.id.generateButton);
         mFactDisplayText = (TextView) findViewById(R.id.factDisplayText);
-        mLayout = findViewById(R.id.myLayout);
+        mLayout = (RelativeLayout) findViewById(R.id.myLayout);
         View.OnClickListener generateListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 //update screen with our dynamic fact
-                mFactDisplayText.setText(mFactBook.get_fact());
-                int x = mColorBook.get_color();
-                mLayout.setBackgroundColor(x);
+                Pair dump = mFactBook.get_fact();
+                mFactDisplayText.setText(dump.get_first());
+                mLayout.setBackgroundColor(dump.get_second());
+                mGenereateButton.setTextColor(dump.get_second());
             }
         };
         mGenereateButton.setOnClickListener(generateListener);
