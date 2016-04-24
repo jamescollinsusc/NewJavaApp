@@ -4,7 +4,6 @@ import java.util.Random;
 
 public class ColorBook {
 
-    private FactBook mFactBook = new FactBook();
     private int mColorArray[] = {
             0xFF39add1,
             0xFF3079ab,
@@ -34,7 +33,7 @@ public class ColorBook {
     };
     public int get_color(){
         Random getRandom = new Random();
-        int randomNumber = getRandom.nextInt(mFactBook.get_size());
+        int randomNumber = getRandom.nextInt(mColorArray.length);
         return mColorArray[randomNumber];
     }
 }
