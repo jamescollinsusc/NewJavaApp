@@ -6,34 +6,42 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Layout;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.Random;
+
+import static java.lang.Integer.*;
 
 public class MainActivity extends AppCompatActivity {
     // Declare our view variables
     private TextView mFactDisplayText;
     private Button mGenereateButton;
     private FactBook mFactBook = new FactBook();
+    private ColorBook mColorBook = new ColorBook();
+    private View mLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         // Assign views from layout to fields
         mGenereateButton = (Button) findViewById(R.id.generateButton);
         mFactDisplayText = (TextView) findViewById(R.id.factDisplayText);
+        mLayout = findViewById(R.id.myLayout);
         View.OnClickListener generateListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 //update screen with our dynamic fact
                 mFactDisplayText.setText(mFactBook.get_fact());
+                int x = mColorBook.get_color();
+                mLayout.setBackgroundColor(x);
             }
         };
         mGenereateButton.setOnClickListener(generateListener);

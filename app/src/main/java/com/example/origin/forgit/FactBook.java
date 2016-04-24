@@ -30,4 +30,9 @@ public class FactBook {
         fact = mFacts[randomNumber];
         return fact;
     }
+
+    public int get_size(){
+        return mFacts.length;
+    }
+
 }
